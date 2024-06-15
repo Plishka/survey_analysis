@@ -1,7 +1,7 @@
 ## Stack Overflow Annual Developer Survey 2023 Results Analysis
 
 ### Overview
-This analysis is based on the Stack Overflow Annual Developer Survey 2023 data. The survey collected responses from developers worldwide, providing insights into various aspects of their professional life and preferences.
+This analysis is based on the Stack Overflow Annual Developer Survey 2023 data, which consisted of 83 questions. The survey collected responses from developers worldwide, providing insights into various aspects of their professional life and preferences.
 
 ### Key Questions Answered
 
