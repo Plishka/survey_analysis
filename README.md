@@ -1,38 +1,43 @@
-# Stack Overflow Annual Developer Survey 2023 Results Analysis
+## Stack Overflow Annual Developer Survey 2023 Results Analysis
 
-## **Project Overview**
-Using the Stack Overflow Annual Developer Survey 2023 data and a Python Notebook, this project aims to answer the following questions:
-1. How many respondents completed the survey?
-2. How many respondents answered all the mandatory questions?
-3. What are the median values for the respondents’ work experience (WorkExp)?
-4. How many respondents work remotely?
-5. What percentage of respondents program in Python?
-6. How many respondents learned to program through online courses?
-7. What is the average and median compensation among respondents who program in Python in each country?
-8. What education levels do the top 5 highest-paid respondents have?
-9. What percentage of respondents program in Python in each age category?
-10. Which industries are the most prevalent among respondents (who work remotely) in the 75th percentile for average compensation?
+### Overview
+This analysis is based on the Stack Overflow Annual Developer Survey 2023 data. The survey collected responses from developers worldwide, providing insights into various aspects of their professional life and preferences.
 
-## **Steps and Code**
+### Key Questions Answered
 
-### **1. Number of Respondents Completed the Survey**
-```python
-import numpy as np
-import pandas as pd
+1. **Number of Respondents Completed the Survey**
+   - The survey had a total of 89,184 respondents who completed it.
 
-survey = pd.read_csv('C:/Users/plish/Desktop/Python_HW/Stack Overflow Developer Survey 2023/survey_results_public.csv')
-schema = pd.read_csv('C:/Users/plish/Desktop/Python_HW/Stack Overflow Developer Survey 2023/schema.csv')
+2. **Number of Respondents Who Answered All Mandatory Questions**
+   - Out of all respondents, 2,032 answered all the mandatory questions.
 
-# Number of respondents completed the survey
-Q1 = survey['ResponseId'].nunique()
-print(f'{Q1} respondents took part in the survey')
-# 89,184 respondents took part in the survey
+3. **Median Work Experience**
+   - The median work experience among respondents was 5.0 years.
 
-### **2. Number of Respondents Who Answered All Mandatory Questions**
-```python
-# Number of respondents who answered all the mandatory questions
-questions = set(schema.qname.unique()) & set(survey.columns)  # Connecting survey with survey schema to get all mandatory questions
-Q2 = survey.dropna(subset=questions).shape[0]
-print(f'{Q2} respondents have answered all the questions in the survey')
-# 2,032 respondents have answered all the questions in the survey
+4. **Respondents Work Remotely**
+   - A total of 30,566 respondents reported working remotely.
 
+5. **Percentage of Respondents Who Program in Python**
+   - Approximately 49.5% of respondents reported programming in Python.
+
+6. **Number of Respondents Who Learned to Program Through Online Courses**
+   - A significant portion of respondents, 43,201 in total, learned to code via online courses.
+
+7. **Average and Median Compensation Among Respondents Who Program in Python in Each Country**
+   - The analysis provided average and median compensation figures for developers who reported programming in Python across different countries.
+
+8. **Education Levels of Top 5 Highest Paid Respondents**
+   - The top 5 highest-paid respondents had various educational backgrounds, such as professional degrees and bachelor’s degrees.
+
+9. **Percentage of Respondents Who Program in Python in Each Age Category**
+   - The analysis segmented respondents by age category to show the percentage of Python programmers in each group.
+
+10. **Most Prevalent Industries Among Respondents in the 75th Percentile for Average Compensation**
+    - Identified industries that were most prevalent among respondents in the 75th percentile for average compensation, particularly those who worked remotely.
+
+### Advanced Functions and Approaches Used
+- **Pandas**: Used for data manipulation and analysis.
+- **Numpy**: Employed for numerical operations.
+- **String Operations**: Utilized to filter and process textual data.
+- **Aggregation and Grouping**: Applied to calculate statistical measures.
+- **Conditional Logic**: Used to handle missing values and specific conditions in the data analysis process.
